@@ -183,11 +183,7 @@ class WebviewManager {
                     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
                     @Override
                     public void run() {
-                        if(request.getOrigin().toString().equals("https://apprtc-m.appspot.com/")) {
-                            request.grant(request.getResources());
-                        } else {
-                            request.deny();
-                        }
+                        request.grant(request.getResources());
                     }
                 });
             }
